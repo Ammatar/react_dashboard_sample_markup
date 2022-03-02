@@ -1,0 +1,58 @@
+@mixin header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  h2 {
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    // line-height: 30px;
+    letter-spacing: 0.3px;
+    color: #252733;
+  }
+  .user__area {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .icons svg {
+      margin: 0 10px;
+    }
+    .name {
+      font-weight: bold;
+    }
+    .avatar {
+    }
+  }
+}
+
+@mixin elemBorder {
+  border: #dfe0eb 1px solid;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+@mixin status {
+  width: 78px;
+  height: 24px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.warning {
+  @include status;
+  background-color: #fec400;
+  color: white;
+}
+.success {
+  @include status;
+  background-color: #29cc97;
+  color: white;
+}
+.disabled {
+  @include status;
+  background-color: #f0f1f7;
+  color: #9fa2b4;
+}
